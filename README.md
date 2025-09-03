@@ -27,13 +27,13 @@ A collection of identification of serpin sequences from whole genome using React
  2. Use Serpin_gtf_filter.py to parse the braker GTF file to filter and extract only the identified serpins.
    Example for 16 chromosomes: we name the sequences with the Chr1, Chr2, Chr3...prefix
 
-       for i in {1..16}
-       do
-       python3 Serpin_gtf_filter.py \
-       --in_GTF Chr${i}_Annotation/braker.gtf \
-       --in_PROT_GFF Chr${i}_Identified_serpins.gff \
-       --out Chr${i}_filtered_merged_Serpins.gtf
-       done
+        for i in {1..16}
+        do
+        python3 Serpin_gtf_filter.py \
+        --in_GTF Chr${i}_Annotation/braker.gtf \
+        --in_PROT_GFF Chr${i}_Identified_serpins.gff \
+        --out Chr${i}_filtered_merged_Serpins.gtf
+        done
 
 3. Use Find_and_rename_serpins_with_old_names.py to match the previously identified serpins with newly identified serpins.
 
